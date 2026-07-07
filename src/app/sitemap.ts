@@ -17,7 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // Category pages
-  const categories = ["hackernews", "reddit", "github_trending", "github_release", "rss"];
+  const categories = ["trending", "community", "open_source", "releases", "ai_labs", "research", "newsletters", "industry"];
   for (const cat of categories) {
     entries.push({
       url: `${baseUrl}/category/${cat}`,

@@ -11,7 +11,7 @@
       "description": "AI generates a real, editable PowerPoint from any document — native shapes & animations, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images · by Hugo He",
       "published": "2026-07-01T14:56:52Z",
       "score": 60,
-      "category": "github_trending",
+      "category": "open_source",
       "weight": 10,
       "stars": 35910,
       "language": "Python"
@@ -24,7 +24,7 @@
       "description": "# Hermes Agent v0.18.0 (v2026.7.1)\n\n**Release Date:** July 1, 2026\n**Since v0.17.0:** ~1,720 commits · 998 merged PRs · 2,215 files changed · ~251,000 insertions · ~41,000 deletions · **949 issues closed** · **370+ community contributors**\n\n> **The Judgment Release.** Over the last week and a half t",
       "published": "2026-07-01T20:08:06Z",
       "score": 60,
-      "category": "github_release",
+      "category": "releases",
       "weight": 10,
       "tag": "v2026.7.1"
     },
@@ -36,7 +36,7 @@
       "description": "<details open>\n\nopencl: allow loading precompiled binary kernels from library (#23042)\n\n* opencl: allow loading binary kernel\n\n* opencl: add libdl.h\n\n* ggml-backend-dl is in ggml, which depends backend libs, thus\n  ggml-opencl cannot depend on ggml-backend-dl\n* add libdl.h to break cyclic dep\n\n* ope",
       "published": "2026-07-01T18:10:10Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9859"
     },
@@ -48,7 +48,7 @@
       "description": "<details open>\n\ncommon : use hf primary split as model path (#25194)\n\nFixes #25181\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b9858/llama-b9858-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](",
       "published": "2026-07-01T17:09:39Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9858"
     },
@@ -60,7 +60,7 @@
       "description": "<details open>\n\nhexagon: flash attention rework (optimizations, accuracy improvements, etc) (#25085)\n\n* hex-mm: fold mm quant tasks into the main matmul threads\n\n* hex-mm: minor formatting fixes\n\n* hex-mm: cleanup is_quant checks in dma dispatch\n\n* hex-mm: fix dst-spad alignment\n\n* hex-mm: move fp k",
       "published": "2026-07-01T14:41:19Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9857"
     },
@@ -72,7 +72,7 @@
       "description": "<details open>\n\nCUDA: consistent use of __restrict__ + PDL for FA (#25185)\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b9856/llama-b9856-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://",
       "published": "2026-07-01T11:09:42Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9856"
     },
@@ -84,7 +84,7 @@
       "description": "<details open>\n\nggml-cpu: add AVX2 optimization for nvfp4 dot product and use UE4M3 LUT (#23961)\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b9855/llama-b9855-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enable",
       "published": "2026-07-01T10:16:09Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9855"
     },
@@ -96,7 +96,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -107,7 +107,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -118,7 +118,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -129,7 +129,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -140,7 +140,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -151,7 +151,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -162,7 +162,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -173,7 +173,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -184,7 +184,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -195,7 +195,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -206,7 +206,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -217,7 +217,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -228,7 +228,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -239,7 +239,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -250,7 +250,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -261,7 +261,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -272,7 +272,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -283,7 +283,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -294,7 +294,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -305,7 +305,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -316,7 +316,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -327,7 +327,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -338,7 +338,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     }
   ]

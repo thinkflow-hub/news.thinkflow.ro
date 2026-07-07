@@ -1,9 +1,12 @@
 export type Category =
-  | "hackernews"
-  | "reddit"
-  | "github_trending"
-  | "github_release"
-  | "rss";
+  | "trending"
+  | "community"
+  | "open_source"
+  | "releases"
+  | "ai_labs"
+  | "research"
+  | "newsletters"
+  | "industry";
 
 export type Sentiment = "positive" | "negative" | "neutral";
 
@@ -81,19 +84,25 @@ export interface Metadata {
 }
 
 export const CATEGORY_LABELS: Record<Category, string> = {
-  hackernews: "Hacker News",
-  reddit: "Reddit",
-  github_trending: "GitHub Trending",
-  github_release: "GitHub Releases",
-  rss: "RSS",
+  trending: "Trending",
+  community: "Community",
+  open_source: "Open Source",
+  releases: "Releases",
+  ai_labs: "AI Labs",
+  research: "Research",
+  newsletters: "Newsletters",
+  industry: "Industry",
 };
 
 export const CATEGORY_COLORS: Record<Category, string> = {
-  hackernews: "#f59e0b",
-  reddit: "#ef4444",
-  github_trending: "#6b7280",
-  github_release: "#6b7280",
-  rss: "#3b82f6",
+  trending: "#f59e0b",
+  community: "#ef4444",
+  open_source: "#6b7280",
+  releases: "#22c55e",
+  ai_labs: "#8b5cf6",
+  research: "#06b6d4",
+  newsletters: "#ec4899",
+  industry: "#64748b",
 };
 
 export const SENTIMENT_COLORS: Record<Sentiment, string> = {

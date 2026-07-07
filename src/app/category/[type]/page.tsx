@@ -12,11 +12,14 @@ interface PageProps {
 }
 
 const VALID_CATEGORIES: Category[] = [
-  "hackernews",
-  "reddit",
-  "github_trending",
-  "github_release",
-  "rss",
+  "trending",
+  "community",
+  "open_source",
+  "releases",
+  "ai_labs",
+  "research",
+  "newsletters",
+  "industry",
 ];
 
 export async function generateStaticParams() {

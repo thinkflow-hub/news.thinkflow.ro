@@ -1,44 +1,44 @@
+import { Flame, MessageCircle, GitGraph, Rocket, FlaskRound, BookOpen, Newspaper, Building2, Sparkles } from "lucide-react";
 import type { Category } from "@/lib/types";
-import { CATEGORY_LABELS, CATEGORY_COLORS } from "@/lib/types";
-import {
-  ExternalLink,
-  MessageCircle,
-  GitGraph,
-  GitFork,
-  Rss,
-} from "lucide-react";
 
-interface SourceBadgeProps {
-  category: Category;
-  sourceName?: string;
-  size?: "sm" | "md";
-}
-
-const icons: Record<Category, React.ReactNode> = {
-  hackernews: <MessageCircle className="w-3 h-3" />,
-  reddit: <ExternalLink className="w-3 h-3" />,
-  github_trending: <GitGraph className="w-3 h-3" />,
-  github_release: <GitFork className="w-3 h-3" />,
-  rss: <Rss className="w-3 h-3" />,
+const iconMap: Record<string, React.ReactNode> = {
+  trending: <Flame className="w-3.5 h-3.5" />,
+  community: <MessageCircle className="w-3.5 h-3.5" />,
+  open_source: <GitGraph className="w-3.5 h-3.5" />,
+  releases: <Rocket className="w-3.5 h-3.5" />,
+  ai_labs: <FlaskRound className="w-3.5 h-3.5" />,
+  research: <BookOpen className="w-3.5 h-3.5" />,
+  newsletters: <Newspaper className="w-3.5 h-3.5" />,
+  industry: <Building2 className="w-3.5 h-3.5" />,
 };
 
-export function SourceBadge({ category, sourceName, size = "sm" }: SourceBadgeProps) {
-  const color = CATEGORY_COLORS[category];
-  const label = sourceName || CATEGORY_LABELS[category];
-  const isSm = size === "sm";
+const labelMap: Record<string, string> = {
+  trending: "Trending",
+  community: "Community",
+  open_source: "Open Source",
+  releases: "Releases",
+  ai_labs: "AI Labs",
+  research: "Research",
+  newsletters: "Newsletters",
+  industry: "Industry",
+};
+
+interface SourceBadgeProps {
+  category?: string;
+  sourceName?: string;
+}
+
+export function SourceBadge({ category, sourceName }: SourceBadgeProps) {
+  if (!category) return null;
+
+  const icon = iconMap[category] ?? <Sparkles className="w-3.5 h-3.5" />;
+  const label = labelMap[category] ?? sourceName ?? category;
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 font-medium rounded-full ${
-        isSm ? "px-2.5 py-0.5 text-xs" : "px-3 py-1 text-sm"
-      }`}
-      style={{
-        backgroundColor: `${color}15`,
-        color: color,
-        border: `1px solid ${color}30`,
-      }}
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full source-${category}`}
     >
-      {icons[category]}
+      {icon}
       {label}
     </span>
   );

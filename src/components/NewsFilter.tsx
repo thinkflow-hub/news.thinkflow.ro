@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import type { NewsItem, Category } from "@/lib/types";
 import { CATEGORY_LABELS } from "@/lib/types";
-import { Search, Filter } from "lucide-react";
+import { Search, Filter, Flame, MessageCircle, GitGraph, Rocket, FlaskRound, BookOpen, Newspaper, Building2, PartyPopper } from "lucide-react";
 
 interface NewsFilterProps {
   items: NewsItem[];
@@ -12,13 +12,16 @@ interface NewsFilterProps {
 
 type Tab = "all" | Category;
 
-const TABS: { id: Tab; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "hackernews", label: "Hacker News" },
-  { id: "reddit", label: "Reddit" },
-  { id: "github_trending", label: "GitHub" },
-  { id: "github_release", label: "Releases" },
-  { id: "rss", label: "RSS" },
+const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
+  { id: "all", label: "All", icon: <PartyPopper className="w-3.5 h-3.5" /> },
+  { id: "trending", label: "Trending", icon: <Flame className="w-3.5 h-3.5" /> },
+  { id: "community", label: "Community", icon: <MessageCircle className="w-3.5 h-3.5" /> },
+  { id: "open_source", label: "Open Source", icon: <GitGraph className="w-3.5 h-3.5" /> },
+  { id: "releases", label: "Releases", icon: <Rocket className="w-3.5 h-3.5" /> },
+  { id: "ai_labs", label: "AI Labs", icon: <FlaskRound className="w-3.5 h-3.5" /> },
+  { id: "research", label: "Research", icon: <BookOpen className="w-3.5 h-3.5" /> },
+  { id: "newsletters", label: "Newsletters", icon: <Newspaper className="w-3.5 h-3.5" /> },
+  { id: "industry", label: "Industry", icon: <Building2 className="w-3.5 h-3.5" /> },
 ];
 
 export function NewsFilter({ items, onFilter }: NewsFilterProps) {
@@ -53,12 +56,13 @@ export function NewsFilter({ items, onFilter }: NewsFilterProps) {
               setActiveTab(tab.id);
               onFilter(filtered);
             }}
-            className={`px-3 py-1.5 text-sm font-medium rounded-full transition-all ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-full transition-all ${
               activeTab === tab.id
                 ? "bg-accent text-white shadow-[0_0_15px_rgba(59,130,246,0.3)]"
                 : "bg-card text-muted hover:text-foreground border border-border"
             }`}
           >
+            {tab.icon}
             {tab.label}
           </button>
         ))}

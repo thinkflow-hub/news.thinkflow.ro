@@ -11,7 +11,7 @@
       "description": "## Faster Gemma 4 on Apple Silicon\r\n\r\n<img width=\"1037\" height=\"485\" alt=\"Screenshot 2026-06-30 at 5 25 29 PM\" src=\"https://github.com/user-attachments/assets/547d5076-090f-43c4-a661-938e11abc955\" />\r\n\r\nGemma 4 is now significantly faster in Ollama on Apple Silicon, generating tokens nearly 90% fast",
       "published": "2026-06-30T22:10:17Z",
       "score": 54,
-      "category": "github_release",
+      "category": "releases",
       "weight": 9,
       "tag": "v0.31.1"
     },
@@ -23,7 +23,7 @@
       "description": "",
       "published": "",
       "score": 50,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 10
     },
     {
@@ -34,7 +34,7 @@
       "description": "",
       "published": "",
       "score": 50,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 10
     },
     {
@@ -45,7 +45,7 @@
       "description": "",
       "published": "",
       "score": 50,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 10
     },
     {
@@ -56,7 +56,7 @@
       "description": "",
       "published": "",
       "score": 50,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 10
     },
     {
@@ -67,7 +67,7 @@
       "description": "<details open>\n\nopencl: initial q1_0 support (#25160)\n\n* opencl: general q1_0 support\n\n* opencl: add Adreno GEMM/GEMV for q1_0\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b9852/llama-b9852-bin-macos-arm64.tar.gz)\n- macOS Apple S",
       "published": "2026-07-01T05:11:56Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9852"
     },
@@ -79,7 +79,7 @@
       "description": "<details open>\n\ncuda : prevent integer truncation and overflow errors when using KQ mask strides in flash_attn_mask_to_KV_max kernel (#24945)\n\nCo-authored-by: Stanisław Szymczyk <sszymczy@gmail.com>\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/rel",
       "published": "2026-06-30T19:35:08Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9851"
     },
@@ -91,7 +91,7 @@
       "description": "<details open>\n\nmodel : register t_layer_inp for qwen3next (#25141)\n\n* Fix input assignment in layer processing loop\n\nFix DFLASH for qwen-coder-next\n\n* add line break\n\nAdded tensor for attention normalization in Qwen3 model.\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.",
       "published": "2026-06-30T16:53:33Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9850"
     },
@@ -103,7 +103,7 @@
       "description": "<details open>\n\ncommon,server: handle bracketed IPv6 literals in URL authority (#25140)\n\n* common,server: handle bracketed IPv6 literals in URL authority\n\nParse the [host]:port form (RFC 3986) and bracket IPv6 hosts when\nformatting a URL authority: listening log, proxy Host header, proxy\nlog, client",
       "published": "2026-06-30T14:56:43Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9849"
     },
@@ -115,7 +115,7 @@
       "description": "<details open>\n\nCUDA: fix get_rows_back for tables with more than 65535 rows (grid-y clamp + stride) (#25103)\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b9848/llama-b9848-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, Kl",
       "published": "2026-06-30T14:06:34Z",
       "score": 48,
-      "category": "github_release",
+      "category": "releases",
       "weight": 8,
       "tag": "b9848"
     },
@@ -127,7 +127,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -138,7 +138,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -149,7 +149,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -160,7 +160,7 @@
       "description": "",
       "published": "",
       "score": 45,
-      "category": "rss",
+      "category": "ai_labs",
       "weight": 9
     },
     {
@@ -171,7 +171,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -182,7 +182,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -193,7 +193,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -204,7 +204,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -215,7 +215,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -226,7 +226,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -237,7 +237,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -248,7 +248,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -259,7 +259,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -270,7 +270,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -281,7 +281,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -292,7 +292,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -303,7 +303,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -314,7 +314,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -325,7 +325,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     },
     {
@@ -336,7 +336,7 @@
       "description": "",
       "published": "",
       "score": 40,
-      "category": "rss",
+      "category": "research",
       "weight": 8
     }
   ]

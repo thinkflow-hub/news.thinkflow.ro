@@ -14,10 +14,14 @@
   --card: rgba(255, 255, 255, 0.03);
   --card-hover: rgba(255, 255, 255, 0.06);
   --glow-blue: rgba(59, 130, 246, 0.15);
-  --hn: #f59e0b;
-  --reddit: #ef4444;
-  --github: #6b7280;
-  --rss: #3b82f6;
+  --c-trending: #f59e0b;
+  --c-community: #ef4444;
+  --c-open-source: #6b7280;
+  --c-releases: #22c55e;
+  --c-ai-labs: #8b5cf6;
+  --c-research: #06b6d4;
+  --c-newsletters: #ec4899;
+  --c-industry: #64748b;
   --positive: #22c55e;
   --negative: #ef4444;
   --neutral: #94a3b8;
@@ -35,10 +39,14 @@
   --color-card: var(--card);
   --font-sans: var(--font-montserrat), sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
-  --color-hn: var(--hn);
-  --color-reddit: var(--reddit);
-  --color-github: var(--github);
-  --color-rss: var(--rss);
+  --color-trending: var(--c-trending);
+  --color-community: var(--c-community);
+  --color-open-source: var(--c-open-source);
+  --color-releases: var(--c-releases);
+  --color-ai-labs: var(--c-ai-labs);
+  --color-research: var(--c-research);
+  --color-newsletters: var(--c-newsletters);
+  --color-industry: var(--c-industry);
   --color-positive: var(--positive);
   --color-negative: var(--negative);
   --color-neutral: var(--neutral);
@@ -93,19 +101,23 @@ body {
   border-radius: var(--radius);
 }
 
-.source-hn { --source-color: var(--hn); }
-.source-reddit { --source-color: var(--reddit); }
-.source-github_trending { --source-color: var(--github); }
-.source-github_release { --source-color: var(--github); }
-.source-rss { --source-color: var(--rss); }
-.source-hackernews { --source-color: var(--hn); }
+.source-trending { --source-color: var(--c-trending); }
+.source-community { --source-color: var(--c-community); }
+.source-open_source { --source-color: var(--c-open-source); }
+.source-releases { --source-color: var(--c-releases); }
+.source-ai_labs { --source-color: var(--c-ai-labs); }
+.source-research { --source-color: var(--c-research); }
+.source-newsletters { --source-color: var(--c-newsletters); }
+.source-industry { --source-color: var(--c-industry); }
 
-.gradient-hn { background: linear-gradient(135deg, #f59e0b20, #f59e0b08); }
-.gradient-reddit { background: linear-gradient(135deg, #ef444420, #ef444408); }
-.gradient-github_trending { background: linear-gradient(135deg, #6b728020, #6b728008); }
-.gradient-github_release { background: linear-gradient(135deg, #6b728020, #6b728008); }
-.gradient-rss { background: linear-gradient(135deg, #3b82f620, #3b82f608); }
-.gradient-hackernews { background: linear-gradient(135deg, #f59e0b20, #f59e0b08); }
+.gradient-trending { background: linear-gradient(135deg, #f59e0b20, #f59e0b08); }
+.gradient-community { background: linear-gradient(135deg, #ef444420, #ef444408); }
+.gradient-open_source { background: linear-gradient(135deg, #6b728020, #6b728008); }
+.gradient-releases { background: linear-gradient(135deg, #22c55e20, #22c55e08); }
+.gradient-ai_labs { background: linear-gradient(135deg, #8b5cf620, #8b5cf608); }
+.gradient-research { background: linear-gradient(135deg, #06b6d420, #06b6d408); }
+.gradient-newsletters { background: linear-gradient(135deg, #ec489920, #ec489908); }
+.gradient-industry { background: linear-gradient(135deg, #64748b20, #64748b08); }
 
 @keyframes fadeInUp {
   from {

@@ -21,11 +21,14 @@ interface NewsCardProps {
 }
 
 const scoreIcon: Record<string, React.ReactNode> = {
-  hackernews: <ArrowUp className="w-3 h-3" />,
-  reddit: <ArrowUp className="w-3 h-3" />,
-  github_trending: <Star className="w-3 h-3" />,
-  github_release: <Star className="w-3 h-3" />,
-  rss: <Star className="w-3 h-3" />,
+  trending: <ArrowUp className="w-3 h-3" />,
+  community: <ArrowUp className="w-3 h-3" />,
+  open_source: <Star className="w-3 h-3" />,
+  releases: <Star className="w-3 h-3" />,
+  ai_labs: <Star className="w-3 h-3" />,
+  research: <Star className="w-3 h-3" />,
+  newsletters: <Star className="w-3 h-3" />,
+  industry: <Star className="w-3 h-3" />,
 };
 
 function SentimentDot({ sentiment }: { sentiment?: Sentiment }) {
@@ -86,13 +89,7 @@ function Thumbnail({ item }: { item: NewsItem }) {
         className="text-4xl font-bold opacity-20"
         style={{ color: CATEGORY_COLORS[item.category] }}
       >
-        {item.category === "hackernews"
-          ? "Y"
-          : item.category === "reddit"
-          ? "R"
-          : item.category === "github_trending" || item.category === "github_release"
-          ? "G"
-          : "F"}
+        {CATEGORY_LABELS[item.category]?.charAt(0) || "N"}
       </span>
     </div>
   );
@@ -128,7 +125,7 @@ export function NewsCard({ item, index = 0, onClusterClick }: NewsCardProps) {
         <div className="p-4 space-y-3">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <SourceBadge category={item.category} size="sm" />
+              <SourceBadge category={item.category} />
               <SentimentDot sentiment={item.sentiment} />
             </div>
             <span className="flex items-center gap-1 text-xs text-muted shrink-0">
