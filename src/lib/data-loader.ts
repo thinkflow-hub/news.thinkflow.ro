@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import type { NewsItem, NewsData, Metadata, Category } from "./types";
+import type { NewsItem, NewsData, Metadata, Category, DailyBriefing, GeoMetadata } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "public", "data", "news");
 
@@ -13,6 +13,39 @@ export function readNewsFile(date: string): NewsItem[] {
     return data.items || [];
   } catch {
     return [];
+  }
+}
+
+export function readNewsData(date: string): NewsData | null {
+  try {
+    const filePath = path.join(DATA_DIR, `${date}.json`);
+    if (!fs.existsSync(filePath)) return null;
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+export function readDailyBriefing(date: string): DailyBriefing | null {
+  try {
+    const filePath = path.join(DATA_DIR, `${date}_briefing.json`);
+    if (!fs.existsSync(filePath)) return null;
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+export function readGeoMetadata(date: string): GeoMetadata | null {
+  try {
+    const filePath = path.join(DATA_DIR, `${date}_geo.json`);
+    if (!fs.existsSync(filePath)) return null;
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return null;
   }
 }
 
@@ -35,7 +68,7 @@ export function getAllDates(): string[] {
     if (!fs.existsSync(DATA_DIR)) return [];
     const files = fs.readdirSync(DATA_DIR);
     return files
-      .filter((f) => f.endsWith(".json") && f !== "metadata.json")
+      .filter((f) => f.endsWith(".json") && f !== "metadata.json" && !f.includes("_briefing") && !f.includes("_geo"))
       .map((f) => f.replace(".json", ""))
       .sort()
       .reverse();
@@ -47,4 +80,17 @@ export function getAllDates(): string[] {
 export function getLatestDate(): string | null {
   const dates = getAllDates();
   return dates.length > 0 ? dates[0] : null;
+}
+
+export function getAllTopics(): string[] {
+  const meta = readMetadata();
+  const dates = meta?.dates || [];
+  const topics = new Set<string>();
+  for (const date of dates.slice(0, 7)) {
+    const geo = readGeoMetadata(date);
+    if (geo?.topics) {
+      geo.topics.forEach((t) => topics.add(t));
+    }
+  }
+  return Array.from(topics).sort();
 }

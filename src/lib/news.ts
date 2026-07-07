@@ -15,10 +15,6 @@ export async function getNewsByDate(date: string): Promise<NewsItem[]> {
   }
 }
 
-export async function getNewsByDateSync(date: string): Promise<NewsItem[]> {
-  return getNewsByDate(date);
-}
-
 export async function getAllDates(): Promise<string[]> {
   try {
     const res = await fetch("/data/news/metadata.json");
@@ -62,4 +58,8 @@ export function extractDomain(url: string): string {
   } catch {
     return "";
   }
+}
+
+export function getItemsFromCluster(items: NewsItem[], clusterId: string): NewsItem[] {
+  return items.filter((i) => i.cluster_id === clusterId);
 }

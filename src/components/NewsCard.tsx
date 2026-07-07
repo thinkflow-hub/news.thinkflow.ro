@@ -1,19 +1,23 @@
-import type { NewsItem, Category } from "@/lib/types";
-import { CATEGORY_COLORS, CATEGORY_LABELS } from "@/lib/types";
+"use client";
+
+import { useState } from "react";
+import type { NewsItem, Category, Sentiment } from "@/lib/types";
+import { CATEGORY_COLORS, CATEGORY_LABELS, SENTIMENT_COLORS } from "@/lib/types";
 import { SourceBadge } from "./SourceBadge";
+import { SummaryToggle } from "./SummaryToggle";
 import {
   ExternalLink,
   MessageCircle,
   Star,
   ArrowUp,
-  ChevronDown,
-  ChevronUp,
+  Layers,
 } from "lucide-react";
 import { extractDomain } from "@/lib/news";
 
 interface NewsCardProps {
   item: NewsItem;
   index?: number;
+  onClusterClick?: (clusterId: string) => void;
 }
 
 const scoreIcon: Record<string, React.ReactNode> = {
@@ -23,6 +27,18 @@ const scoreIcon: Record<string, React.ReactNode> = {
   github_release: <Star className="w-3 h-3" />,
   rss: <Star className="w-3 h-3" />,
 };
+
+function SentimentDot({ sentiment }: { sentiment?: Sentiment }) {
+  if (!sentiment || sentiment === "neutral") return null;
+  const color = SENTIMENT_COLORS[sentiment];
+  return (
+    <span
+      className="inline-block w-2 h-2 rounded-full shrink-0"
+      style={{ backgroundColor: color }}
+      title={sentiment}
+    />
+  );
+}
 
 function Thumbnail({ item }: { item: NewsItem }) {
   const gradClass = `gradient-${item.category}`;
@@ -74,9 +90,19 @@ function Thumbnail({ item }: { item: NewsItem }) {
   );
 }
 
-export function NewsCard({ item, index = 0 }: NewsCardProps) {
+export function NewsCard({ item, index = 0, onClusterClick }: NewsCardProps) {
   const domain = extractDomain(item.url);
   const scoreVal = item.points || item.upvotes || item.stars || item.score || 0;
+  const [summaryMode, setSummaryMode] = useState<"tldr" | "detailed" | "bullets">("tldr");
+
+  const hasCluster = item.cluster_id && (item.cluster_size ?? 0) > 1;
+  const hasMultipleSummaries = !!(item.summary_detailed || item.summary_bullets);
+
+  const displaySummary = () => {
+    if (summaryMode === "detailed" && item.summary_detailed) return item.summary_detailed;
+    if (summaryMode === "bullets" && item.summary_bullets) return item.summary_bullets;
+    return item.summary;
+  };
 
   return (
     <article
@@ -93,7 +119,10 @@ export function NewsCard({ item, index = 0 }: NewsCardProps) {
 
         <div className="p-4 space-y-3">
           <div className="flex items-center justify-between gap-2">
-            <SourceBadge category={item.category} size="sm" />
+            <div className="flex items-center gap-2">
+              <SourceBadge category={item.category} size="sm" />
+              <SentimentDot sentiment={item.sentiment} />
+            </div>
             <span className="flex items-center gap-1 text-xs text-muted shrink-0">
               {scoreIcon[item.category]}
               <span>{scoreVal}</span>
@@ -104,16 +133,37 @@ export function NewsCard({ item, index = 0 }: NewsCardProps) {
             {item.title}
           </h3>
 
-          {item.summary && (
+          {displaySummary() && (
             <p className="text-xs text-muted leading-relaxed line-clamp-2">
-              {item.summary}
+              {displaySummary()}
             </p>
           )}
 
           <div className="flex items-center justify-between text-xs text-muted pt-1">
-            <span className="truncate max-w-[180px]">{domain}</span>
+            <div className="flex items-center gap-2">
+              <span className="truncate max-w-[140px]">{domain}</span>
+              {hasCluster && (
+                <span
+                  className="inline-flex items-center gap-1 text-accent/80 hover:text-accent cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onClusterClick?.(item.cluster_id!);
+                  }}
+                >
+                  <Layers className="w-3 h-3" />
+                  <span>{item.cluster_size}</span>
+                </span>
+              )}
+            </div>
             <ExternalLink className="w-3 h-3 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
+
+          {hasMultipleSummaries && (
+            <div className="pt-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}>
+              <SummaryToggle mode={summaryMode} onChange={setSummaryMode} />
+            </div>
+          )}
         </div>
       </a>
     </article>

@@ -3,6 +3,7 @@ import { Montserrat, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SchemaOrg } from "@/components/SchemaOrg";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s — news.thinkflow.ro",
   },
   description:
-    "Daily curated AI, cloud, DevOps, and web development news. Aggregated from Hacker News, Reddit, GitHub, and RSS. Summarized by local LLM.",
+    "Daily curated AI, cloud, DevOps, and web development news. Aggregated from Hacker News, Reddit, GitHub, and RSS. AI-summarized with GEO-optimized metadata.",
   metadataBase: new URL("https://news.thinkflow.ro"),
   openGraph: {
     type: "website",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "news.thinkflow.ro",
     title: "news.thinkflow.ro — AI & Tech News Aggregator",
     description:
-      "Daily curated AI, cloud, DevOps, and web development news from HN, Reddit, GitHub, and RSS.",
+      "Daily curated AI, cloud, DevOps, and web development news from HN, Reddit, GitHub, and RSS. AI-summarized.",
   },
   twitter: {
     card: "summary_large_image",
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistMono.variable} font-sans mesh-bg antialiased min-h-screen flex flex-col`}
       >
+        <SchemaOrg />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
