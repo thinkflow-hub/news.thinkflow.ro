@@ -40,17 +40,25 @@ function SentimentDot({ sentiment }: { sentiment?: Sentiment }) {
   );
 }
 
+function proxyUrl(url: string | null | undefined): string | undefined {
+  if (!url) return undefined;
+  if (url.startsWith("http")) return `/api/image?url=${encodeURIComponent(url)}`;
+  return url;
+}
+
 function Thumbnail({ item }: { item: NewsItem }) {
   const gradClass = `gradient-${item.category}`;
+  const imgSrc = proxyUrl(item.thumbnail);
 
-  if (item.thumbnail) {
+  if (imgSrc) {
     return (
       <div className="relative w-full h-36 overflow-hidden rounded-t-2xl bg-black/40">
         <img
-          src={item.thumbnail}
+          src={imgSrc}
           alt=""
           className="w-full h-full object-cover"
           loading="lazy"
+          referrerPolicy="no-referrer"
           onError={(e) => {
             (e.target as HTMLImageElement).style.display = "none";
           }}
