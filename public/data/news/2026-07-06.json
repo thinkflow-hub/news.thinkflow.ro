@@ -1,0 +1,121 @@
+{
+  "date": "2026-07-06",
+  "last_updated": "2026-07-06T06:00:02.077821+00:00",
+  "total_items": 10,
+  "items": [
+    {
+      "source_id": "ggml_releases",
+      "source_name": "ggml/llama.cpp releases",
+      "title": "ggml/llama.cpp releases: b9878",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b9878",
+      "description": "<details open>\n\nFix stale tensor-split params for draft models (#24814)\n\n* meta: fix tensor split metadata for GQA attention\n\n* Tidied the code a bit to match existing style\n\n* Revert \"Tidied the code a bit to match existing style\"\n\nThis reverts commit b90c6c6300091fe09e2350a3d4edcfcf15db8d2e.\n\n* Re",
+      "published": "2026-07-05T19:43:25Z",
+      "score": 48,
+      "category": "github_release",
+      "weight": 8,
+      "tag": "b9878"
+    },
+    {
+      "source_id": "ggml_releases",
+      "source_name": "ggml/llama.cpp releases",
+      "title": "ggml/llama.cpp releases: b9877",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b9877",
+      "description": "<details open>\n\nabort if we see a multi buffer (#25276)\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b9877/llama-b9877-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org",
+      "published": "2026-07-05T19:12:59Z",
+      "score": 48,
+      "category": "github_release",
+      "weight": 8,
+      "tag": "b9877"
+    },
+    {
+      "source_id": "ggml_releases",
+      "source_name": "ggml/llama.cpp releases",
+      "title": "ggml/llama.cpp releases: b9876",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b9876",
+      "description": "<details open>\n\nggml : fix tensor-parallel + -ncmoe crash on MoE models (#25028)\n\nTensor parallelism (-sm tensor) combined with -ncmoe (CPU-offloaded MoE\nexperts) aborts during warm-up on MoE models with\nGGML_ASSERT(ggml_is_contiguous(tensor)) in ggml-backend-meta.cpp.\n\nThe failing tensor is the MoE",
+      "published": "2026-07-05T18:29:08Z",
+      "score": 48,
+      "category": "github_release",
+      "weight": 8,
+      "tag": "b9876"
+    },
+    {
+      "source_id": "ggml_releases",
+      "source_name": "ggml/llama.cpp releases",
+      "title": "ggml/llama.cpp releases: b9874",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b9874",
+      "description": "<details open>\n\ncuda : concat implementation for quantized types (#25303)\n\n* cuda : concat implementation for quantized types\n\n* chore : apply am17an clever suggestion to shorten the code\n\n---------\n\nCo-authored-by: Stanisław Szymczyk <sszymczy@gmail.com>\n\n</details>\n\n**macOS/iOS:**\n- [macOS Apple S",
+      "published": "2026-07-05T15:53:37Z",
+      "score": 48,
+      "category": "github_release",
+      "weight": 8,
+      "tag": "b9874"
+    },
+    {
+      "source_id": "huggingface_blog",
+      "source_name": "Hugging Face Blog",
+      "title": "🤗 Kernels: Major Updates",
+      "url": "https://huggingface.co/blog/revamped-kernels",
+      "description": "",
+      "published": "",
+      "score": 45,
+      "category": "rss",
+      "weight": 9
+    },
+    {
+      "source_id": "marktechpost",
+      "source_name": "MarkTechPost",
+      "title": "Sakana AI Launches Sakana Translate, a Namazu-Powered Japanese–English–Chinese Translation Tool With Translate, Proofread, and Ask Modes",
+      "url": "https://www.marktechpost.com/2026/07/05/sakana-ai-launches-sakana-translate/",
+      "description": "",
+      "published": "",
+      "score": 30,
+      "category": "rss",
+      "weight": 6
+    },
+    {
+      "source_id": "marktechpost",
+      "source_name": "MarkTechPost",
+      "title": "Synthetic Sciences Releases OpenScience: An Open-Source, Model-Agnostic AI Workbench for Machine Learning, Biology, Physics, and Chemistry Research",
+      "url": "https://www.marktechpost.com/2026/07/05/synthetic-sciences-releases-openscience-an-open-source-model-agnostic-ai-workbench-for-machine-learning-biology-physics-and-chemistry-research/",
+      "description": "",
+      "published": "",
+      "score": 30,
+      "category": "rss",
+      "weight": 6
+    },
+    {
+      "source_id": "marktechpost",
+      "source_name": "MarkTechPost",
+      "title": "Training Gemma-3 for Structured Mathematical Reasoning with Tunix GRPO, LoRA Adapters, and GSM8K Rewards",
+      "url": "https://www.marktechpost.com/2026/07/05/training-gemma-3-for-structured-mathematical-reasoning-with-tunix-grpo-lora-adapters-and-gsm8k-rewards/",
+      "description": "",
+      "published": "",
+      "score": 30,
+      "category": "rss",
+      "weight": 6
+    },
+    {
+      "source_id": "marktechpost",
+      "source_name": "MarkTechPost",
+      "title": "Meituan Releases LongCat-2.0: A 1.6T-Parameter Open MoE Model with Native 1M Context and LongCat Sparse Attention",
+      "url": "https://www.marktechpost.com/2026/07/05/meituan-releases-longcat-2-0-a-1-6t-parameter-open-moe-model-with-native-1m-context-and-longcat-sparse-attention/",
+      "description": "",
+      "published": "",
+      "score": 30,
+      "category": "rss",
+      "weight": 6
+    },
+    {
+      "source_id": "marktechpost",
+      "source_name": "MarkTechPost",
+      "title": "LlamaIndex ‘legal-kb’: Agentic Retrieval over Index v2 with retrieve, find, read, and grep Tools",
+      "url": "https://www.marktechpost.com/2026/07/05/llamaindex-legal-kb-agentic-retrieval-over-index-v2-with-retrieve-find-read-and-grep-tools/",
+      "description": "",
+      "published": "",
+      "score": 30,
+      "category": "rss",
+      "weight": 6
+    }
+  ]
+}
